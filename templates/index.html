@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Credit Scoring </title>
+<link rel="stylesheet" type="text/css" href="../static/style.css"> 
+</head>
+<body>
+    <h1 class="heading" style="color:#7689de"> Retailer Credit Score </h1>
+    <div class="link">
+    <p>check for retailers score by providing below given Details.</p></div>
+   
+    <form  action="/pr" method="POST">
+
+
+    <h2><label  style="color:#7689de">Retailer ID (example:14) </label></h2>
+    <div class="mydiv"> <input  size="50" type="text" name="retailer"  placeholder="Enter Retailer Number" required="required" /></div>
+  
+    <div class="mydiv"><h2><label style="color:#7689de">Last Day of Transaction (example:5)</label></h2>
+    <input size="50" type="text" name="date" placeholder="Enter Number of Days " required="required"/></div>
+  
+    <div class="mydiv"><h2><label style="color:#7689de">Total Number Of Orders (example:2000)</label></h2>
+    <input size="50" type="text" name="orders" placeholder="Enter Number of Orders" required="required"/></div>
+    
+    
+    <div class="mydiv"><h2><label style="color:#7689de">Total Orders Cost</label></h2>
+    <input size="50" color="white" type="text" name="rev" placeholder="Enter Amount" required="required"/></div>
+
+    <br/>
+   <div size="30"class="mydiv"><button color="white" type="submit" value="predict">predict your's!</button></div>
+
+</form>
+
+<p>your predict</p>
+ 
+
+{% if out==[0] %} 
+<img src="../static/third.webp" alt="Trulli" width="500" height="333">
+{% endif %}
+
+{% if out==[1] %} 
+<img src="../static/second.jpg" alt="Trulli" width="500" height="333">
+{% endif %}
+
+
+{% if out==[2] %} 
+<img src="../static/cap.PNG" alt="Trulli" width="500" height="333">
+{% endif %}
+  
+
+
+
+</body>
+</html>
